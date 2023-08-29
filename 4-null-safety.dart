@@ -3,18 +3,19 @@
  It's automatically enabled in current Flutter projects
  A String must have a string value, but a String? accepts null
 */
-// String myName;        // What's the value? Null? IMPOSSIBLE
+//String myName = null;        // What's the value? Null? IMPOSSIBLE
 
-late String myName; // We express we will have a value later, before using it
+late String? myName =
+    null; // We express we will have a value later, before using it
 
-String? myLastname; // It can handle a null value
+String? myLastname = null; // It can handle a null value
 
 // Null operators
 // **************
-// print(myLastname.length);   // it doesn't work!
+// print(myLastname?.length);   // it doesn't work!
 
 // null manual override
-final lengthForSure = myLastname!.length;
+final lengthForSure = myLastname!.length; // assert that it's not null
 
 // Safe calls
-var length = myLastname?.length;
+var length = myLastname?.length; // it works, it's null

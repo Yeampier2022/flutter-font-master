@@ -8,5 +8,8 @@
 List<String> countries = ["Argentina", "Brazil", "Canada", "Denmark"];
 
 // We also have sets and maps (dictionaries)
-var strings = {"a", "b", "c", "c"};
+var strings = {"a", "b", "c"};
+
 var readWriteMap = {"foo": 1, "bar": 2};
+
+var json = {"name": "John", "surname": "Doe"};

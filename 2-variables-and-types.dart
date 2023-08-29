@@ -23,6 +23,7 @@ playingWithTypes() {
   // Core Data Types
   String stringValue;
   int integerValue;
+
   double doubleValue;
   bool booleanValue; // values are true and false
   dynamic anything;
@@ -40,5 +41,5 @@ playingWithTypes() {
 
   // Every string can have template expressions using $ or ${}
   // expression result will be converted to string
-  var message = "The $price price is ${otherPrice * 1.1}";
+  var message = "The price  $price  is ${otherPrice * 1.1}";
 }
