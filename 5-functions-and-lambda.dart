@@ -41,10 +41,23 @@ playingWithCalls() {
   sum3(3, b: 4);
 }
 
+printCustomer(String name, {required double balance, required bool isActive}) {
+  print("Customer $name has a balance of $balance and is active: $isActive");
+  print(name);
+  print(balance);
+  print(isActive);
+}
+
+callPrint() {
+  printCustomer("Yeampier", balance: 460, isActive: true);
+}
+
 /*: * Lambda or anonymous functions, Type is Function
    if no return is expected, we use void
  */
-Function myFunction = (int number, bool isReady) {};
+Function myFunction = (int number, bool isReady) {
+  // this is the body of the function
+};
 
 // Arrow functions are also possible if they have only one sentence
 
