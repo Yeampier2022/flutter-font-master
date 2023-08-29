@@ -32,11 +32,21 @@ class Request {
 
   // named constructores
 
-  Request.fromData(this.id, this.url);
+  Request.fromData(this.id, this.url) {
+    if (id < 0) {
+      throw new Exception("Id must be positive");
+    } else {
+      this.id = id;
+    }
+    ;
+    print("Request created with id: $id and url: $url");
+  }
 }
 
 class HttpRequest extends Request {
-  HttpRequest(int id, String url) : super(id, url);
+  HttpRequest(int id, String url) : super(id, url) {
+    print("HttpRequest created with id: $id and url: $url");
+  }
 }
 
 // We can also use named parameters
